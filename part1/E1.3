@@ -1,0 +1,9 @@
+commands:
+docker pull devopsdockeruh/simple-web-service:ubuntu
+docker run -d --name my-simple-web-service devopsdockeruh/simple-web-service:ubuntu
+docker exec -it my-simple-web-service bash
+tail -f ./text.log
+
+secret message: 
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
