@@ -1,7 +1,13 @@
-sh -c 'while true; do echo "Input website:"; read website; echo "Searchin.."; sleep 1; curl http://$website; done'
+# inside the container we can install curl by running :
+> apt-get install -y curl
+# The y flag:
+
+
+Running the command in the ubuntu:
+docker exec -it web-service-ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
 Input website:
 helsinki.fi
-Searchin..
+Searching..
 <html>
 <head><title>301 Moved Permanently</title></head>
 <body>
